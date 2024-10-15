@@ -43,10 +43,10 @@ section{
 .body .img {
   width: 351px;
   border-radius: 38px;
-  transition: transform 0.3s ease; /* 애니메이션을 추가해 부드럽게 전환 */
+  transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.05); /* 이미지 확대 (크기를 1.05배로) */
+    transform: scale(1.05);
   }
 }
 
@@ -82,7 +82,7 @@ section{
   word-break: break-word;
 }
 
-/**/
+//버튼
 .body .B-inner .btn{
   @extend .btn-style;
   background: $main-color;
