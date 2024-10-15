@@ -1,0 +1,157 @@
+$b-title-color: #312E2B;
+$s-title-color: #454545;
+$font-Regular-size: 12px;
+
+$main-color:#D0B69B;
+$sub-color:#DBCBBA;
+
+///layout
+
+.btn-style{
+  display: inline-flex;
+  padding: 10px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+
+
+///section
+section{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-img{
+  display: none;
+}
+
+
+.body {
+  margin:0 auto;
+  display: flex;
+  gap:58px;
+
+
+}
+
+.body .img {
+  width: 351px;
+  border-radius: 38px;
+  transition: transform 0.3s ease; /* 애니메이션을 추가해 부드럽게 전환 */
+
+  &:hover {
+    transform: scale(1.05); /* 이미지 확대 (크기를 1.05배로) */
+  }
+}
+
+.body .B-inner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.body .B-inner .txt{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.body .B-inner .txt .B-title{
+  font-family: 'Pretendard-B', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color:$b-title-color;
+
+  width: 160px;
+  text-align: left;
+  margin-bottom: 10px;
+
+}
+.body .B-inner .txt .S-title{
+  color:$s-title-color;
+  font-size:$font-Regular-size;
+
+  width: 285px;
+  word-break: break-word;
+}
+
+/**/
+.body .B-inner .btn{
+  @extend .btn-style;
+  background: $main-color;
+  font-weight: 600;
+  color:white;
+
+  &:hover{
+   background-color: darken($main-color, 10%);
+  }
+}
+
+
+.body .B-inner .btn-login{
+  @extend .btn-style;
+  background: $sub-color;
+  font-weight: 600;
+  color: white;
+
+  &:hover{
+    background-color: darken($sub-color,10%);
+  }
+}
+
+
+//tab
+@media all and (max-width: 768px) {
+  .body{
+    flex-direction: column;
+  }
+
+  .body .B-inner{
+    align-items: center;
+    gap:54px;
+  }
+
+  .body .B-inner .txt{
+    align-items: center;
+  }
+
+  .body .B-inner .txt .B-title{
+    width:282px;
+
+  }
+  .body .B-inner .txt .S-title {
+    display: flex;
+    text-align: center;
+  }
+
+
+  .body .B-inner .btn-login{
+    display: none;
+  }
+
+}
+
+// mobile
+@media all and (max-width: 480px) {
+  section {
+    display: none;
+  }
+
+  .mobile-img {
+    display: flex;
+  }
+
+  .mobile-img img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
