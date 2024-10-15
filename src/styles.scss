@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Pretendard-R';
+  src: url('assets/font/Pretendard-Regular.otf') format('oft');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-B';
+  src: url('assets/font/Pretendard-ExtraBold.otf') format('oft');
+}
+
+body {
+  font-family: 'Pretendard-R', sans-serif;
+}
+
